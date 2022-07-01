@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #B3E8E5;
+  background: linear-gradient(139deg, #B3E8E5 0%, #3BACB6 90%);
+  font-family: 'Roboto Condensed', sans-serif;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  max-width: 800px;
+  padding: 10px;
+  margin: 50px auto;
+}
+
+.addTask {
+  width: 100%;
+  display: flex;
+  padding: 10px 0;
+}
+
+.addTask>input[type="text"] {
+  width: 90%;
+  color: #333;
+  border: none;
+  border-bottom: 3px solid #666;
+  background: none;
+  padding: 10px;
+  font-size: 22px;
+  outline: none;
+}
+
+.addTask button {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 16;
+  -moz-border-radius: 16;
+  border-radius: 16px;
+  color: #ffffff;
+  font-size: 23px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  border: none;
+}
+
+.addTask :hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+
+.notCompleted, .Completed {
+  margin: 5px 0;
+  padding: 20px;
+}
+
+h3 {
+  font-size: 28px;
+  text-align: center;
+  color: #fff;
+}
+
+ol {
+  list-style: none;
+  counter-reset: my-counter;
+}
+
+ol li {
+  width: 100%;
+  padding: 18px;
+  margin: 5px 0;
+  background: #FAD4D4;
+  font-size: 22px;
+  counter-increment: my-counter;
+  border-radius: 20px;
+}
+
+ol.Completed li {
+  background: #2F8F9D;
+}
+
+ol li::before {
+  content: counter(my-counter);
+  background: #764AF1;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: inline-block;
+  line-height: 2rem;
+  text-align: center;
+  color: #fff;
+  margin-right: 0.5rem;
+}
+
+li button {
+  float: right;
+  padding: 5px;
+  font-size: 28px;
+  line-height: 28px;
+  margin-right: 15px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.tick {
+  width: 100px;
+}
